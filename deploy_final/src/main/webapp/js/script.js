@@ -1,0 +1,65 @@
+/*const modal = document.querySelector('.my-modal');
+const modalContent = document.querySelector('.mymodal-content');
+const decreaseBtn = document.querySelector('.decrease');
+const increaseBtn = document.querySelector('.increase');
+const quantity = document.querySelector('#quantity');
+// const productItem = document.querySelectorAll('.product-item');
+
+console.log('test');
+
+modal.addEventListener('click', function () {
+  modal.classList.add('hidden');
+});
+
+modalContent.addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
+
+(function () {
+  setTimeout(function () {
+	modal.style.display = 'flex';
+  }, 4000);
+})();*/
+
+/*decreaseBtn.addEventListener('click', function(e){
+	e.preventDefault();
+	if(quantity.value > 1){
+		quantity.value -= 1;
+	}
+})
+
+increaseBtn.addEventListener('click', function(e){
+	e.preventDefault();
+	quantity.value += 1;
+})*/
+
+
+const list = [];
+
+fetch("/deploy_final/brand")
+	.then((response) => {
+		console.log(response);
+		if (!response.ok) throw new Error(`Request failed`);
+		return response.json();
+	})
+	.then((data) => {
+		
+	
+		
+		const keys = Object.keys(data);
+
+		keys.forEach((key) => {
+			list.push(data[key]);
+		});
+
+		console.log(list);
+		for (b of list) {
+			let html = `<li><a href="product?brand=${b['id']}">${b['name']}</a></li>`;
+			document
+				.querySelector(".product-menu")
+				.insertAdjacentHTML("beforeend", html);
+
+
+		}
+	});

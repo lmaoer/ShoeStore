@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Thế giới giày</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="icon" href="img/icon_title.png" type="image/icon type">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+	<div class="main">
+		<div class="header"></div>
+		<div class="nav">
+			<div class="logo"><a href="index.html"><img src="img/shop_logo.jpg" alt=""></a></div>
+			<ul class="menu">
+				<li><a href="index.html">trang chủ</a></li>
+				<li><a href="about.html">giới thiệu</a></li>
+				<li>
+					<a href="product.html">sản phẩm <i class="fa fa-angle-down"></i></a>
+					<ul class="product-menu">
+						<li><a href="product.html">Adidas</a></li>
+						<li><a href="product.html">Nike</a></li>
+						<li><a href="product.html">Vans</a></li>
+						<li><a href="product.html">Converse</a></li>
+						<li><a href="product.html">Fila</a></li>
+						<li><a href="product.html">Puma</a></li>
+						<li><a href="product.html">All</a></li>
+
+					</ul>
+				</li>
+				<li><a href="news.html">tin tức</a></li>
+				<li><a href="contact.html">liên hệ</a></li>
+			</ul>
+		</div>
+
+		<h1 class="product-title">Tất cả sản phẩm</h1>
+		<div class="product-container">
+			<div class="search">
+
+				<form action="" class="search-form">
+					<input type="text" class="search-field" placeholder="Search">
+					<button class="search-field-submit"><i class="fas fa-search"></i></button>
+				</form>
+
+				<div class="search-controll search-price">
+					<h4>Giá</h4>
+					<p><i class="fas fa-tags"></i> Giá dưới 1.000.000đ</p>
+					<p><i class="fas fa-tags"></i> 1.000.000đ - 2.000.000đ</p>
+					<p><i class="fas fa-tags"></i> Giá trên 2.000.000đ</p>
+				</div>
+				<div class="search-controll search-brand">
+					<h4>Hãng</h4>
+					<p><i class="fas fa-shoe-prints"></i> Adidas</p>
+					<p><i class="fas fa-shoe-prints"></i> Converse</p>
+					<p><i class="fas fa-shoe-prints"></i> Nike</p>
+					<p><i class="fas fa-shoe-prints"></i> Puma</p>
+					<p><i class="fas fa-shoe-prints"></i> Vans</p>
+					<p><i class="fas fa-shoe-prints"></i> Fila</p>
+				</div>
+			</div>
+
+			<div class="product-content">
+				<div class="product-page-menu">
+					<div class="page-menu">
+						<div class="page-select-item active">1</div>
+						<div class="page-select-item">2</div>
+						<div class="page-select-item">3</div>
+						<div class="page-select-item">4</div>
+						<div class="page-select-item">5</div>
+						<div class="page-select-item">6</div>
+					</div>
+					<div class="sort-menu">
+						<label for="sort">Sắp xếp</label>
+
+						<select id="sort">
+							<option value="default">Giá tăng dần</option>
+							<option value="price-desc">Giá giảm dần</option>
+							<option value="alpha-asc">Từ A-Z</option>
+						</select>
+
+					</div>
+				</div>
+				<div class="product-grid">
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+					<div class="product-item">
+						<img class="product-img"
+							src="https://bizweb.dktcdn.net/thumb/large/100/339/085/products/i01b-cw4555-001001purecm0245-jpg-size-n.jpg?v=1646226829000"
+							alt="">
+						<p class="product-name">Nike Air Max SC 'Pure Platinum Wolf Grey' | CW4555-001</p>
+						<span class="product-price">1.780.000₫</span><br>
+						<span class="product-cost">2.690.000đ</span>
+						<span><i class="fas fa-eye item-hover"></i></span>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="banner-product">
+			<h4>ĐĂNG KÝ NHẬN THÔNG TIN CẬP NHẬT VÀ ƯU ĐÃI QUA EMAIL</h4>
+			<div><a href="contact.html#contact-form" class="banner-product-btn">ĐĂNG KÝ NHẬN BẢN TIN <i
+						class="fas fa-long-arrow-alt-right"></i></a></div>
+		</div>
+
+		<div class="footer">
+			<div class="footer-container">
+				<div class="about">
+					<div class="logo"><a href="index.html"><img src="img/shop_logo.jpg" alt=""></a></div>
+					<h4 style="padding-top: 40px;">Về chúng tôi</h4>
+					<ul class="footer-menu">
+						<li><a href="about.html">Giới thiệu</a></li>
+						<li><a href="product.html">Sản phẩm</a></li>
+						<li><a href="news.html">Tin tức</a></li>
+						<li><a href="#">Đối tác</a></li>
+						<li><a href="contact.html">Liên hệ</a></li>
+					</ul>
+				</div>
+				<div class="address">
+					<h4>THẾ GIỚI GIÀY - 100% AUTHENTIC</h4>
+					<ul>
+						<li><span>96A Trần Phú, P. Mộ Lao, Hà Đông, Hà Nội</span></li>
+						<li><span>Hotline: 0362957746</span></li>
+						<li><span>Email: longdq.ptit@gmail.com</span></li>
+					</ul>
+				</div>
+				<div>
+					<h4>Kết nối với chúng tôi</h4>
+					<div class="row-footer">
+						<div><i class="fab fa-facebook-f"></i></div>
+						<div><i class="fab fa-twitter"></i></div>
+						<div><i class="fab fa-instagram"></i></div>
+						<div><i class="fas fa-envelope"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="contact">
+			<i class="fab fa-facebook-messenger"></i>
+		</div>
+
+	</div>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

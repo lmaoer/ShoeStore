@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Quản lý sản phẩm</h1>
+    <main class="container">
+        <div class="main-nav">
+            <a href="#" class="btn">Thêm sản phẩm</a>
+            <input type="text" placeholder="Search" search>
+        </div>
+        <!-- String id, String name, int cost, int discount, String image,
+			String imageDetail, Brand brand -->
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>Discount</th>
+                    <th>Image</th>
+                    <th>Image Detail</th>
+                    <th>Brand</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>159816</td>
+                    <td>One Star Ox</td>
+                    <td>1750000</td>
+                    <td>12</td>
+                    <td><img src="img/products/product-img-test-1.jpg" alt=""></td>
+                    <td><img src="img/products/product-img-test-2.jpg" alt=""></td>
+                    <td>4</td>
+                    <td>
+                        <a href="#">XÓA</a>
+                        <span>|</span>
+                        <a href="#">SỬA</a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+    </main>
+</body>
+
+</html>

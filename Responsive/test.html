@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <!-- <a class="btn-link" page="1" href="testurl.html">TEST</a> -->
+
+    <script>
+        // document.querySelector('a').setAttribute('selected', '')
+        // document.querySelector('a').classList.add('selected')
+
+        // console.log(document.querySelector(`.btn - link[page = "${1}"]`));
+
+        document.querySelector('div').insertAdjacentHTML('beforeend', `<a class="btn-link" href="testurl.html">TEST</a><br>`)
+        document.querySelector('div').insertAdjacentHTML('beforeend', `<a class="btn-link" href="testurl.html">TEST</a><br>`)
+        document.querySelector('div').insertAdjacentHTML('beforeend', `<a class="btn-link" href="testurl.html">TEST</a><br>`)
+        document.querySelector('div').insertAdjacentHTML('beforeend', `<a class="btn-link" href="testurl.html">TEST</a><br>`)
+        document.querySelector('a').setAttribute('selected', '')
+
+        document.querySelectorAll('.btn-link').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert('https')
+            })
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thế giới giày</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&family=Rubik:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="icon" href="img/favicon.png" type="image/icon type">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/general.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-details">
+            <div>
+                SẢN PHẨM CHÍNH HÃNG 100% | Hotline: <a tel href="tel:0362957746">0362957746</a>
+            </div>
+            <div>
+                <span class="user-logo"><i class="far fa-user"></i></span><a user-btn href="#">Đăng nhập</a>|<a user-btn
+                    href="#">Đăng
+                    ký</a><span><a class="btn-cart" href="#"><i class="fas fa-shopping-cart"></i></a></span><span
+                    class="num-cart">0</span>
+            </div>
+        </div>
+        <nav class="navigation">
+            <img class="logo" src="img/logo.jpg" alt="shop logo">
+            <div class="navbar">
+                <ul class="navbar-menu">
+                    <li><a class="btn-link" href="#">Trang chủ</a></li>
+                    <li><a class="btn-link" href="#">Giới thiệu</a></li>
+                    <li>
+                        <a class="btn-link " href="#">Sản phẩm <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-product">
+                            <li><a href="#">Adidas</a></li>
+                            <li><a href="#">Nike</a></li>
+                            <li><a href="#">Vans</a></li>
+                            <li><a href="#">Converse</a></li>
+                            <li><a href="#">Fila</a></li>
+                            <li><a href="#">Puma</a></li>
+                            <li><a href="#">Khác</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="btn-link" href="#">Tin tức</a></li>
+                    <li><a class="btn-link" href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container-list-product">
+            <table class="cart-list">
+                <tr>
+                    <th>ảnh sản phẩm</th>
+                    <th>thông tin</th>
+                    <th>đơn giá</th>
+                    <th>số lượng</th>
+                    <th>thành tiền</th>
+                    <th>xóa</th>
+                </tr>
+                <c:forEach var="i" items="${sessionScope.list_orders}">
+                    <tr>
+                        <td style="width: 17%"><a href="detail?id=${i.product.id}"><img style="width:100%;height:289px"
+                                    src="img/products/product-img-test-1.jpg"></a></td>
+                        <td style="width: 28%"><a href="detail?id=${i.product.id}">${i.product.name} | ${i.product.id
+                                }</a></td>
+                        <td style="width: 16%; color:#3dc8f6;">
+                            <fmt:formatNumber type="number" maxFractionDigits="3"
+                                value="${i.product.cost-i.product.cost*i.product.discount/100}" />200.000.000 đ
+                        </td>
+                        <td style="width: 14%">
+                            <a href="update?command=decrease&itemId=${i.product.id }" class="btn-update-cart">-</a>
+                            1
+                            <a href="update?command=increase&itemId=${i.product.id }" class="btn-update-cart">+</a>
+                        </td>
+                        <td style="width: 20%; color:#3dc8f6;">
+                            <fmt:formatNumber type="number" maxFractionDigits="3"
+                                value="${i.quantity*(i.product.cost-i.product.cost*i.product.discount/100)}" />
+                            200.000.000 đ
+                        </td>
+                        <td style="width: 5%"><a href="update?command=delete&itemId=${i.product.id }"><i
+                                    class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                </c:forEach>
+            </table>
+
+
+            <p style="color:#3dc8f6;padding: 24px 0;text-align: right;">Tổng tiền: total
+                <fmt:formatNumber type="number" maxFractionDigits="3" value="${sessionScope.total}" /> đ
+            </p>
+
+            <div class="cart-redirect-btn">
+                <button class="cart-redirect-product" onclick="window.location.href='product'">Tiếp tục mua
+                    hàng</button>
+                <button style="margin-left: 4px; background-color: #3dc8f6" onclick="${sessionScope.total>0?"
+                    window.location.href='check_out.html'":" #"}">Thanh toán</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer margin-top-big">
+        <div class="footer-content grid grid--3-cols container">
+            <div class="footer-about">
+                <img class="logo footer--logo" src="img/logo.jpg" alt="shop logo">
+
+                <span>Về chúng tôi</span>
+                <ul>
+                    <a class="btn-link" href="#">
+                        <li>Giới thiệu</li>
+                    </a>
+                    <a class="btn-link" href="#">
+                        <li>Sản phẩm</li>
+                    </a>
+                    <a class="btn-link" href="#">
+                        <li>Tin tức</li>
+                    </a>
+                    <a class="btn-link" href="#">
+                        <li>Đối tác</li>
+                    </a>
+                    <a class="btn-link" href="#">
+                        <li>Liên hệ</li>
+                    </a>
+                </ul>
+
+
+            </div>
+            <div class="footer-address">
+                <p>THẾ GIỚI GIÀY - 100% AUTHENTIC</p>
+                <span>96A Trần Phú, P. Mộ Lao, Hà Đông, Hà Nội</span>
+                <span>Hotline: <a tel href="tel:0362957746">0362957746</a></span>
+                <span>Email: <a mail href="mailto:longdq.ptit@gmail.com">longdq.ptit@gmail.com</a> </span>
+            </div>
+            <div class="footer-contact">
+                <p>Kết nối với chúng tôi</p>
+                <div class="footer-socials">
+                    <i class="footer-social fab fa-facebook"></i>
+                    <i class="footer-social fab fa-twitter"></i>
+                    <i class="footer-social fab fa-instagram"></i>
+                    <i class="footer-social fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
